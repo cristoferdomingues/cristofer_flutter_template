@@ -1,5 +1,6 @@
+import 'package:cristofer_flutter_template/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:cristofer_flutter_template/app/modules/home/home_module.dart';
+import '../router.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -9,7 +10,8 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeModule(),
+      onGenerateRoute: Router.generateRoute,
+      initialRoute: homeRoute,
     );
   }
 }

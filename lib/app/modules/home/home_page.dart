@@ -20,9 +20,12 @@ class _HomePageState extends State<HomePage> {
           title: Text(widget.title),
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
+              textAlign: TextAlign.center,
             ),
             Observer(
               builder: (BuildContext context) {
