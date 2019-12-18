@@ -42,7 +42,8 @@ flutter:
   uses-material-design: true
 
 scripts:
-  build_runner: build_runner build
+  build: flutter packages pub run build_runner build
+  watch: flutter packages pub run build_runner watch
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
