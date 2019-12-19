@@ -19,21 +19,24 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-              textAlign: TextAlign.center,
-            ),
-            Observer(
-              builder: (BuildContext context) {
-                return Text('${homeController.value}',
-                    style: Theme.of(context).textTheme.display1);
-              },
-            ),
-          ],
+        body: Container(
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'You have pushed the button this many times:',
+                textAlign: TextAlign.center,
+              ),
+              Observer(
+                builder: (BuildContext context) {
+                  return Text('${homeController.value}',
+                      style: Theme.of(context).textTheme.display1);
+                },
+              ),
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: homeController.increment,
