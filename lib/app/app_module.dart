@@ -1,3 +1,4 @@
+import 'package:cristofer_flutter_template/app/widgets/bottom_navigator/bottom_navigator_controller.dart';
 import 'package:cristofer_flutter_template/app/app_controller.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,7 @@ import 'package:cristofer_flutter_template/app/app_widget.dart';
 class AppModule extends ModuleWidget {
   @override
   List<Bloc> get blocs => [
+        Bloc((i) => BottomNavigatorController()),
         Bloc((i) => AppController()),
       ];
 

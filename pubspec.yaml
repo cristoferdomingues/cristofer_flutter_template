@@ -13,8 +13,8 @@ environment:
   sdk: '>=2.0.0-dev.68.0 <3.0.0'
 
 dependencies:
-  flutter_mobx: ^0.3.3+3
-  mobx: ^0.3.9+3
+  flutter_mobx: ^1.0.1
+  mobx: ^1.0.0
   dio: ^3.0.7
   rxdart: ^0.23.1
   bloc_pattern: ^2.5.1
@@ -25,9 +25,11 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
 
 dev_dependencies:
-  mobx_codegen: ^0.3.10+1
-  build_runner: ^1.7.2
+  mobx_codegen: ^1.0.1
+  build_runner: ^1.7.3
   mockito: ^4.1.1
+  json_annotation: ^3.0.0
+  analyzer: ^0.39.4 
   flutter_test:
     sdk: flutter
 
@@ -42,7 +44,7 @@ flutter:
   uses-material-design: true
 
 scripts:
-  build: flutter packages pub run build_runner build
+  build: flutter packages pub run build_runner build --delete-conflicting-outputs
   watch: flutter packages pub run build_runner watch
   # To add assets to your application, add an assets section, like this:
   # assets:
