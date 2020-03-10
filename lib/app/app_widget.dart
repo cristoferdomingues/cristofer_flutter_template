@@ -11,7 +11,7 @@ class AppWidget extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       onGenerateRoute: Router.generateRoute,
-      initialRoute: homeRoute,
+      initialRoute: loginRoute,
     );
   }
 }
