@@ -14,7 +14,7 @@ class LoginFormState extends State<LoginForm> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
-  final AssetImage backgroundImage = new AssetImage('assets/images/logo.png');
+  final AssetImage backgroundImage = new AssetImage(DotEnv().env['APP_LOGO']);
   @override
   Widget build(BuildContext context) {
     print(DotEnv().env);
@@ -30,7 +30,7 @@ class LoginFormState extends State<LoginForm> {
               decoration: BoxDecoration(
                 image: new DecorationImage(
                   image: this.backgroundImage,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ),
               alignment: Alignment.center,
