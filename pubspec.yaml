@@ -33,6 +33,7 @@ dev_dependencies:
   mockito: ^4.1.1
   json_annotation: ^3.0.0
   analyzer: ^0.39.4
+  flutter_svg: ^0.17.4
   flutter_test:
     sdk: flutter
 
@@ -47,6 +48,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/icons/
     - .env
 scripts:
   build: flutter packages pub run build_runner build --delete-conflicting-outputs
@@ -73,5 +75,12 @@ scripts:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito/Nunito-Regular.ttf
+        - asset: assets/fonts/Nunito/Nunito-SemiBold.ttf
+          weight: 600
+        - asset: assets/fo
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
